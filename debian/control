@@ -1,0 +1,57 @@
+Source: virtualenv-clone
+Section: python
+Priority: optional
+Maintainer: Jan Dittberner <jandd@debian.org>
+Build-Depends: debhelper (>= 10), dh-python, python3-all, python-all, python-setuptools, python3-setuptools, python-pytest, python3-pytest, python3-virtualenv, python-virtualenv, virtualenv
+Standards-Version: 4.1.3
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+Homepage: https://pypi.python.org/pypi/virtualenv-clone
+Vcs-Git: git://anonscm.debian.org/collab-maint/virtualenv-clone.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/virtualenv-clone.git
+
+Package: virtualenv-clone
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-virtualenv-clone
+Description: script for cloning a non-relocatable virtualenv
+ Virtualenv provides a way to make virtualenv's relocatable which could then be
+ copied as wanted. However making a virtualenv relocatable this way breaks
+ the no-site-packages isolation of the virtualenv as well as other aspects that
+ come with relative paths and '/usr/bin/env' shebangs that may be undesirable.
+ .
+ Also, the .pth and .egg-link rewriting doesn't seem to work as intended. This
+ attempts to overcome these issues and provide a way to easily clone an
+ existing virtualenv.
+ .
+ This is the transition package for python-virtualenv-clone.
+
+Package: python-virtualenv-clone
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: script for cloning a non-relocatable virtualenv
+ Virtualenv provides a way to make virtualenv's relocatable which could then be
+ copied as wanted. However making a virtualenv relocatable this way breaks
+ the no-site-packages isolation of the virtualenv as well as other aspects that
+ come with relative paths and '/usr/bin/env' shebangs that may be undesirable.
+ .
+ Also, the .pth and .egg-link rewriting doesn't seem to work as intended. This
+ attempts to overcome these issues and provide a way to easily clone an
+ existing virtualenv.
+ .
+ This is the Python2 package
+
+Package: python3-virtualenv-clone
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Conflicts: python-virtualenv-clone
+Description: script for cloning a non-relocatable virtualenv
+ Virtualenv provides a way to make virtualenv's relocatable which could then be
+ copied as wanted. However making a virtualenv relocatable this way breaks
+ the no-site-packages isolation of the virtualenv as well as other aspects that
+ come with relative paths and '/usr/bin/env' shebangs that may be undesirable.
+ .
+ Also, the .pth and .egg-link rewriting doesn't seem to work as intended. This
+ attempts to overcome these issues and provide a way to easily clone an
+ existing virtualenv.
+ .
+ This is the Python3 package.
