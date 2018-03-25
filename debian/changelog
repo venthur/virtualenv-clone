@@ -1,3 +1,11 @@
+virtualenv-clone (0.3.0-1.2) unreleased; urgency=medium
+
+  * Non-maintainer upload.
+  * Provide manpages for Python2 and -3 binaries
+  * Add Breaks and Replaces field for the new python-virtualenv-clone package
+
+ -- Bastian Venthur <venthur@debian.org>  Sun, 25 Mar 2018 15:06:08 +0200
+
 virtualenv-clone (0.3.0-1.1) unstable; urgency=medium
 
   * Non-maintainer upload.

@@ -23,11 +23,13 @@ Description: script for cloning a non-relocatable virtualenv
  attempts to overcome these issues and provide a way to easily clone an
  existing virtualenv.
  .
- This is the transition package for python-virtualenv-clone.
+ This is a dummy package depending on python-virtualenv-clone.
 
 Package: python-virtualenv-clone
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}
+Breaks: virtualenv-clone (<< 0.3.0)
+Replaces: virtualenv-clone (<< 0.3.0)
 Description: script for cloning a non-relocatable virtualenv
  Virtualenv provides a way to make virtualenv's relocatable which could then be
  copied as wanted. However making a virtualenv relocatable this way breaks
